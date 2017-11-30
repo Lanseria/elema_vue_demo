@@ -1,0 +1,10 @@
+image: node:8
+
+variables:
+  NODE_ENV: gitlab-ci
+
+browser:
+  script:
+    - yarn --frozen-lockfile
+    - yarn lint
+    - yarn build
